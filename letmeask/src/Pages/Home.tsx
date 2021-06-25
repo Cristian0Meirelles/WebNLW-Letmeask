@@ -40,7 +40,12 @@ export function Home(){
 
             if(!roomRef.exists()){
                 alert('Room does not exists.');
-                toast.error("This didn't work.");
+                 //toast.error("This didn't work.");
+                 return;
+            }
+
+            if(roomRef.val().endedAt){
+                alert('Room is already closed');
                 return;
             }
 
